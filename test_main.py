@@ -12,3 +12,11 @@ def test_somar():
     response = client.get("/somar/5/3")
     assert response.status_code == 200
     assert response.json() == {"resultado": 8}
+    
+#________________
+
+# para falhar - resultado não esperado, bug bug by by
+
+def test_multiplicar():
+    response = client.get("/multiplicar/2/2")
+    assert response.json() == {"resultado": 5}
